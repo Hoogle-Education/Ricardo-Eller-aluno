@@ -1,0 +1,8 @@
+{
+  "java.project.sourcePaths": [
+    "java samples/Oscilations Counter/src",
+    "java samples/Flipper/src",
+    "java samples/Divisors/src",
+    "java samples/Subsquences/src"
+  ]
+}
