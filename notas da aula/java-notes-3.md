@@ -29,3 +29,45 @@ for(int i=0; i<linhas; i++){
   System.out.println("");
 }
 ```
+
+# Códigos comuns para Matrizes
+
+## Imprimir/Percorrer a matriz normalmente
+
+```java
+for(int i=0; i<numeroLinhas; i++){
+  for(int j=0; j<numeroColunas; j++){
+    System.out.println(matriz[i][j] + " ");
+  }
+
+  System.out.println("");
+}
+```
+
+## Percorrer colunas e depois linhas
+
+```java
+for(int i=0; i<numeroLinhas; i++){
+  for(int j=0; j<numeroColunas; j++){
+    System.out.println(matriz[j][i] + " ");
+  }
+
+  System.out.println("");
+}
+```
+
+## Diagonal principal (Matriz quadrada)
+
+```java
+for(int i=0; i<n; i++){
+  System.out.println(matriz[i][i] + " ");
+}
+```
+
+## Diagonal secundária (Matriz quadrada)
+
+```java
+for(int i=0; i<n; i++){
+  System.out.println(matriz[i][n-i-1] + " ");
+}
+```
