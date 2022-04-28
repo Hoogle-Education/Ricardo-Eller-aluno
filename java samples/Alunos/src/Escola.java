@@ -8,7 +8,27 @@ class Aluno {
     String parent;
     long phone;
     double score;
+    
+    // constructors and overloaded contructors    
+    public Aluno(String name, int age, String parent, long phone, double score) {
+        this.name = name;
+        this.age = age;
+        this.parent = parent;
+        this.phone = phone;
+        this.score = score;
+    }
 
+    public Aluno(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    public Aluno(String name, int age, String parent) {
+        this.name = name;
+        this.age = age;
+        this.parent = parent;
+    }
+    
     // métodos
     public void birthday(){
         System.out.println("-----------------------");
@@ -26,6 +46,24 @@ class Aluno {
             System.out.println("Reprovado");
     }
 
+    @Override // sobreescrever
+    public String toString() {
+        return "Aluno [age=" 
+                + age 
+                + ", name=" 
+                + name 
+                + ", parent=" 
+                + parent 
+                + ", phone=" 
+                + phone 
+                + ", score=" 
+                + score
+                + "]";
+    }
+
+    // to String
+    
+
 }
 
 // double f(double x) = return (x + 2) || Real x, f: R -> R
@@ -37,21 +75,21 @@ public class Escola {
         Scanner keyboard = new Scanner(System.in);
 
         // criando um dado do tipo aluno
-        Aluno jhon = new Aluno();
-        Aluno martha = new Aluno();
-
-        martha.name = "Martha";
-        martha.age = 12;
-        martha.parent = "Thomas";
-        martha.phone = 29121822L;
-        martha.score = 9.5;
+        Aluno martha = new Aluno("Martha" ,
+                                 12 ,
+                                 "Thomas",
+                                 29121822L ,
+                                 9.5);
 
         System.out.print("Digite o nome do aluno: ");
-        jhon.name = keyboard.nextLine();
+        String name = keyboard.nextLine();
 
         System.out.print("Digite a idade do aluno: ");
-        jhon.age = keyboard.nextInt();
+        int age = keyboard.nextInt();
+                
         keyboard.nextLine(); // resolve enter buffer problem
+
+        Aluno jhon = new Aluno(name, age);
 
         System.out.print("Digite o nome do responsável: ");
         jhon.parent = keyboard.nextLine();
@@ -71,6 +109,8 @@ public class Escola {
         jhon.birthday();
         jhon.birthday();
         System.out.println("Jhon age after birthday: " + jhon.age);
+
+        System.out.println( jhon );
 
 
     }
