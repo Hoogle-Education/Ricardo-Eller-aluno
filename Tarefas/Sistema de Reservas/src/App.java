@@ -36,7 +36,6 @@ public class App extends JFrame implements ActionListener {
         l4 = new JLabel ("4 - Imprimir lista de espera"); 
         l5 = new JLabel ("5 - Cancelar reserva"); 
         l6 = new JLabel ("6 - Finalizar"); 
-
       
         // set the location of label 
         int labelLocation = 30; 
