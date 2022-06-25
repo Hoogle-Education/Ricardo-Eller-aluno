@@ -66,5 +66,5 @@ O modelo `Scanner` do java precisa ser importaddo e é uma classe que pede uma m
 |:--:|:--:|
 |`input.next()`| Lê uma `String` única no terminal |
 |`input.nextLine()`|Lê uma linha do terminal|
-|`ìnput.nextInt()`| Lê o próximo `int` no terminal|
+|`input.nextInt()`| Lê o próximo `int` no terminal|
 |`input.nextDouble()`| Lê o próximo `double` no terminal|
